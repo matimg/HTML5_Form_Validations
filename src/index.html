@@ -23,10 +23,10 @@
           <h1>Payment form example</h1>
         </div>
         <div class="card-body">
-          <div class="alert alert-danger" role="alert">
+          <div class="alert alert-danger" role="alert" id="alert">
             Some fields are missing
           </div>
-          <form>
+          <form id="form">
             <div class="row">
               <div class="col-5 form-group">
                 <label for="card"><b>Card #</b></label>
@@ -78,7 +78,7 @@
             </div>
             <div class="row">
               <div class="col-6 form-group">
-                <label for="city"><b>Last Name</b></label>
+                <label for="city"><b>City</b></label>
                 <input
                   type="text"
                   placeholder=""
@@ -89,7 +89,9 @@
               <div class="col form-group">
                 <label for="state"><b>State</b></label>
                 <select class="custom-select mr-sm-2" id="state">
-                  <option>Pick a state</option>
+                  <option value="">Pick a state</option>
+                  <option value="1">Nueva York</option>
+                  <option value="2">California</option>
                 </select>
               </div>
               <div class="col form-group">
@@ -156,10 +158,10 @@
           </form>
         </div>
         <div class="card-footer">
-          <button type="submit" class="btn btn-primary float-right ml-2">
+          <button id="btn-submit" class="btn btn-primary float-right ml-2">
             Send
           </button>
-          <button type="submit" class="btn btn-secondary float-right">
+          <button class="btn btn-secondary float-right">
             Cancel
           </button>
         </div>
